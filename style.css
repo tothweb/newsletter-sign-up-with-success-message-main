@@ -1,0 +1,249 @@
+:root {
+    --clr-primary-tomato: hsl(4, 100%, 67%);
+    --clr-neutral-dark-slate-grey: hsl(234, 29%, 20%);
+    --clr-neutral-charcoal-grey: hsl(235, 18%, 26%);
+    --clr-neutral-grey: hsl(231, 7%, 60%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --ff-roboto: 'Roboto', sans-serif;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-neutral-charcoal-grey);
+    font-family: var(--ff-roboto);
+}
+
+main {
+    margin: 5px;
+    padding: 1.5rem;
+    display: flex;
+    max-width: 800px;
+    background-color: var(--clr-neutral-white);
+    border-radius: 2rem;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--ff-roboto);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--clr-neutral-dark-slate-grey);
+}
+
+p {
+    margin: 1rem 0;
+    font-size: 16px;
+    color: var(--clr-neutral-dark-slate-grey);
+}
+
+.left-container {
+    padding: 0 1rem 0 2rem;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+    display: flex;
+    font-size: 16px;
+    list-style: none;
+    color: var(--clr-neutral-dark-slate-grey);
+}
+
+li img {
+    margin: 0 1rem 0 0;
+}
+
+
+
+label {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+}
+
+button {
+    margin-top: 2rem;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    color: var(--clr-neutral-white);
+    background-color: var(--clr-neutral-charcoal-grey);
+}
+
+.success-card {
+    display: none;
+    background: var(--clr-neutral-white);
+    width: 100%;
+    max-width: 480px;
+    border-radius: 1.5rem;
+    padding: 3.5rem;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-icon-success {
+    margin: 1rem 0;
+}
+
+.success-card h1 {
+    font-size: 3rem;
+    line-height: 50px;
+
+}
+
+.success-card p {
+    margin: 1.5rem 0;
+}
+
+.success-card .btn {
+    width: 100%;
+    background-color: var(--clr-neutral-charcoal-grey);
+}
+
+.card {
+    background: var(--white);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 780px;
+
+}
+
+
+@media only screen and (max-width: 800px) {
+    .left-container {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        margin: 0.5rem;
+    }
+
+    input {
+        padding: 8px;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    main {
+        padding: 0;
+        margin: 0;
+        max-width: 375px;
+        flex-direction: column-reverse;
+        border-radius: 0;
+
+    }
+
+    .left-container {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    li {
+        padding: 0.5rem 0;
+        text-align: left;
+    }
+
+    body {
+        height: 100vh;
+        align-items: center;
+    }
+
+}
